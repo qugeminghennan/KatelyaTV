@@ -1,0 +1,26 @@
+# Cloudflare Pages 构建配置
+# 这个文件确保 nodejs_compat 标志在 Pages 部署时正确应用
+
+# 构建命令
+Build command: npm run build
+
+# 输出目录  
+Build output directory: .vercel/output/static
+
+# Node.js 版本
+NODE_VERSION = 18
+
+# 环境变量
+NEXT_PUBLIC_STORAGE_TYPE = d1
+NEXT_PUBLIC_SITE_NAME = KatelyaTV
+NEXT_PUBLIC_SITE_DESCRIPTION = 高性能影视播放平台
+NODE_ENV = production
+
+# 兼容性标志 (重要!)
+# 在 Cloudflare Pages 控制台的 "Settings > Functions" 中手动设置:
+# Compatibility flags: nodejs_compat
+
+# D1 绑定
+# 确保在 Pages 项目设置中绑定 D1 数据库:
+# Binding name: DB
+# Database: katelyatv-db (c312fe33-7600-4226-b948-6aed7e76f0ad)
